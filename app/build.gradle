@@ -58,6 +58,7 @@ dependencies {
     def lifecycle_version = "2.4.1"
     def arch_version = "2.1.0"
     def supportVersion = "28.0.0"
+    def koin_version= "3.1.5"
 
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
@@ -84,4 +85,17 @@ dependencies {
 
     //Call Adapter
     implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+
+    // Koin main features for Android
+    implementation "io.insert-koin:koin-android:$koin_version"
+    // No more koin-android-viewmodel, koin-android-scope, koin-android-fragment
+
+    // Java Compatibility
+    implementation "io.insert-koin:koin-android-compat:$koin_version"
+    // Jetpack WorkManager
+    implementation "io.insert-koin:koin-androidx-workmanager:$koin_version"
+    // Navigation Graph
+    implementation "io.insert-koin:koin-androidx-navigation:$koin_version"
+    // Jetpack Compose
+    implementation "io.insert-koin:koin-androidx-compose:$koin_version"
 }
